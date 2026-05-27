@@ -4,8 +4,8 @@ from sqlalchemy.orm import Session
 from sqlalchemy import desc
 from fastapi import HTTPException, status
 
-from app.user.models.verification_code import EmailVerificationCode
-from app.user.models.user import User
+from app.user.models.verification_code_model import EmailVerificationCode
+from app.user.models.user_model import User
 
 
 def validate_code_from_db(code: str, user_id, db: Session):

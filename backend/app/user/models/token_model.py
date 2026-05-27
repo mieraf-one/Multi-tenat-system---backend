@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
 
 from app.core.database import Base
-from app.user.models import user
+from app.user.models import user_model
 
 from datetime import datetime, timezone
 

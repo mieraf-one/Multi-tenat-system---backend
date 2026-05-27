@@ -4,7 +4,7 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
 from app.core.security import create_access_token
-from app.user.models.token import RefreshToken
+from app.user.models.token_model import RefreshToken
 from app.user.services.validators.is_user_active import is_user_active
 
 

@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, timezone
 from jose import jwt
 import bcrypt
 
-from app.user.models.token import RefreshToken
+from app.user.models.token_model import RefreshToken
 from app.core.config import settings
 
 

@@ -5,8 +5,8 @@ from sqlalchemy.orm import Session
 import random
 from datetime import datetime, timedelta, timezone
 
-from app.user.models.verification_code import EmailVerificationCode
-from app.user.models.user import User
+from app.user.models.verification_code_model import EmailVerificationCode
+from app.user.models.user_model import User
 from app.core.config import settings
 
 

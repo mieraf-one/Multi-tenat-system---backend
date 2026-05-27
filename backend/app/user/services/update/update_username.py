@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
-from app.user.models.user import User
+from app.user.models.user_model import User
 
 def validate_username(new_username: str, old_username: str, db: Session):
     # check old username == new username

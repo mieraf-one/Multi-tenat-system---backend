@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 
 from app.core.database import get_db
-from app.user.models.user import User
+from app.user.models.user_model import User
 from app.user.schemas.auth import auth_schema
 from app.user.services.auth import delete_user
 from app.user.services.auth.login import login_user

@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 
 from app.core.security import hash_password, verify_password
-from app.user.models.user import User
+from app.user.models.user_model import User
 from app.user.schemas.auth.auth_schema import PasswordUpdateIn
 
 

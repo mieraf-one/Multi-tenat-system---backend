@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from jose import jwt, JWTError, ExpiredSignatureError
 
 from app.core.config import settings
-from app.user.models.user import User
+from app.user.models.user_model import User
 from app.core.database import get_db
 from app.user.services.validators.is_user_active import is_user_active
 

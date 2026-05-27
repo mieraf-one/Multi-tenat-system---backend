@@ -5,8 +5,8 @@ from fastapi import HTTPException, status
 from app.core.security import hash_password, verify_password
 from app.user.services.verifications.send_email_verification import email_message, generate_code, save_code_to_db, conf
 from fastapi_mail import FastMail
-from app.user.models.verification_code import EmailVerificationCode
-from app.user.models.user import User
+from app.user.models.verification_code_model import EmailVerificationCode
+from app.user.models.user_model import User
 from sqlalchemy.orm import Session
 
 

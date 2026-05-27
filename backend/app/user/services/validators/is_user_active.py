@@ -1,6 +1,6 @@
 from fastapi import HTTPException, status
 
-from app.user.models.user import User
+from app.user.models.user_model import User
 
 
 def is_user_active(current_user: User):

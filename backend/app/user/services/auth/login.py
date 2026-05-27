@@ -4,7 +4,7 @@ from sqlalchemy import or_
 
 
 from app.core.security import create_access_token, create_refresh_token, verify_password
-from app.user.models.user import User
+from app.user.models.user_model import User
 from app.user.schemas.auth.auth_schema import LoginIn
 
 

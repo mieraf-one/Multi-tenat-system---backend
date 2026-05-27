@@ -1,13 +1,11 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, desc
 from sqlalchemy.orm import relationship
-
-from app.core.database import Base
-from app.user.models import token
-
 from datetime import datetime, timezone
 
-from app.user.models.verification_code import EmailVerificationCode
-
+from app.core.database import Base
+from app.user.models import token_model
+from app.user.models.verification_code_model import EmailVerificationCode
+from app.tenant.models import TenantMember
 
 
 class User(Base):
@@ -22,6 +20,7 @@ class User(Base):
     is_active = Column(Boolean, default=True)
     is_verified = Column(Boolean, default=False)
 
+
     created_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
     updated_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc))
 
@@ -35,4 +34,10 @@ class User(Base):
         'EmailVerificationCode',
         back_populates='user',
         order_by=lambda: desc(EmailVerificationCode.created_at)
+    )
+
+
+    tenant_members = relationship(
+        "TenantMember",
+        back_populates="user"
     )
