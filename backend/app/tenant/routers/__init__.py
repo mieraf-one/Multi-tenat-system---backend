@@ -1,0 +1,1 @@
+from .tenant_router import router as tenant_router

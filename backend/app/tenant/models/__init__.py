@@ -1,1 +1,1 @@
-from .tenant_model import Tenant, TenantMember
+from .tenant_model import Tenant, TenantMember, RoleEnum
