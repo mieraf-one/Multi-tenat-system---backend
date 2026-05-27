@@ -26,6 +26,11 @@ class Tenant(Base):
         back_populates="tenant"
     )
 
+    projects = relationship(
+        'Project',
+        back_populates='tenant'
+    )
+
 
 
 class RoleEnum(str, enum.Enum):

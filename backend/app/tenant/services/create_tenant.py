@@ -29,7 +29,7 @@ def create_new_tenant(data: TenantIn, user_id: int, db: Session):
         )
 
         db.add(new_tenant)
-        db.flush()
+        db.flush() # temporary save in db
 
         
         # gather new tenant member data
