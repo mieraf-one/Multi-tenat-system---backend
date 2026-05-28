@@ -9,7 +9,7 @@ from app.core.database import Base
 from app.user.models import RefreshToken, User, EmailVerificationCode
 from app.tenant.models import Tenant, TenantMember
 from app.project.models import Project
-
+from app.task.models import Task
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

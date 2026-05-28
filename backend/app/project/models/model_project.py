@@ -21,3 +21,8 @@ class Project(Base):
         'Tenant',
         back_populates='projects'
     )
+
+    tasks = relationship(
+        'Task',
+        back_populates='project'
+    )
